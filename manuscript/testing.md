@@ -1,4 +1,4 @@
-# Grown-up Programmers Write Software That Is Easy To Test
+# Grown-up Programmers Write Tests To Test Their Programs
 
 ## Why do we need programs to test our programs?
 

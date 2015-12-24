@@ -1,4 +1,4 @@
-# Grown-up Programmers Write Software That Is Easy To Change
+# Grown-up Programmers Write Programs That Are Easy To Change
 
 For many years, we've called it "software" because it's supposedly easy to change. The design of a house, once it's built, is literally set in stone (or concrete, or steel, or timber). Computer code isn't like that: it's not poured like concrete or welded like steel or nailed down like wood. It's much easier to change a line of code than it is to move the foundations of a house.
 

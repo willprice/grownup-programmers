@@ -508,7 +508,7 @@ Object Oriented Programming (OOP) is about dividing up the work our program need
 
 It's a little like the stomp boxes that guitar players use to change the sound of their guitar. Each stomp box does a specific job – like boosting the signal to make it louder, distorting it for a rock sound, adding a chorus effect or echoes, and so on. Guitar players plug their stomp boxes together in a chain to allow them to combine these different effects to get the overall sound they want.
 
-![Pedal board](./media/images/pedalboard.jpg)
+![Pedal board](media/images/pedalboard.jpg)
 
 To vary the sound, players can plug their stomp boxes together in different orders. They can only do this because guitar stomp boxes all present a standard way of plugging them together – via a 1/4-inch cable that connects the output of one stomp box to the input of the next.
 

@@ -87,19 +87,19 @@ Do their names describe what they're for?
 
 A class name should make it clear what its job is. For example, if we write a class that calculates how much rocket fuel a spaceship would need to reach Mars, the name `FuelCalculator` would tell us more than, say, just `Calc`. Don't be afraid to use whole words, and don't worry about making it too obvious!
 
-## Methods & Functions 
+## Methods & Functions
 
 Do their names describe what they do?
 
 If we have a method on a class called `Email` that sends an email, then `email.send()` makes more sense than something like `email.do()` or `email.execute()`.
 
-## Parameters, Variables & Fields 
+## Parameters, Variables & Fields
 
 Do their names describe what they represent?
 
 If we have a parameter of `send()` that let's us queue the email up to send later instead of sending it straight away, choose a name for that parameter that makes it clear what it means (e.g., `email.send(queue=True)` ). The same is true for variables and fields. name them so it's obvious what that piece of data represents in our program. Again, don't be afraid to use whole words; `email.send(q=True)` isn't as clear.
 
-## Special data values 
+## Special data values
 
 Are numbers, strings and other specially important data values clear?
 
@@ -135,7 +135,7 @@ class Book:
         libraryMember.loan(self)
 ```
 
-## Comments 
+## Comments
 
 Do we rely too much on comments to explain our code?
 
@@ -220,15 +220,15 @@ Likewise, something like this:
 ```
 def monthly_sales_total(monthly_sales):
     monthly_total = 0
-    
+
     for daily_sales in monthly_sales:
         daily_total = 0
-        
+
         for item_sale in daily_sales:
             daily_total += item_sale
-            
+
         monthly_total += daily_total
-        
+
     return monthly_total
 ```
 
@@ -265,24 +265,24 @@ So before you add anything to your program, stop and ask yourself: do I know I n
 
 A café serves:
 
-Steak & Kidney Pudding with Green Beans & New Potatoes
-Gammon with Fried Egg, Chips & Beans
-Lasagne with a Green Salad
-Cheese on Toast
+- Steak & Kidney Pudding with Green Beans & New Potatoes
+- Gammon with Fried Egg, Chips & Beans
+- Lasagne with a Green Salad
+- Cheese on Toast
 
 What happens if the customer wants steak & kidney pudding with chips? Or green beans with their gammon? Or a fried egg on toast? We can give diners more choices by breaking down the menu into individual items:
 
-Steak & Kidney Pudding
-Green Beans
-New Potatoes
-Gammon
-Fried Egg
-Chips
-Baked Beans
-Lasagne
-Green Salad
-Cheese (melted)
-Toast
+- Steak & Kidney Pudding
+- Green Beans
+- New Potatoes
+- Gammon
+- Fried Egg
+- Chips
+- Baked Beans
+- Lasagne
+- Green Salad
+- Cheese (melted)
+- Toast
 
 We can make many more dishes with these individual options than the four on offer on the original menu – many more combinations are possible.
 
@@ -305,9 +305,9 @@ def rent(self, renter):
 
 If we split that into three functions, each of which has one specific job:
 
-Calculate video renter's age
-Check they're old enough to rent that video
-Record their video rental
+- Calculate video renter's age
+- Check they're old enough to rent that video
+- Record their video rental
 
 ```python
 def rent(self, renter):
@@ -342,7 +342,7 @@ class Renter:
         self.name = name
         self.date_of_birth = date_of_birth
         self.rented_videos = []
-        
+
     def get_rented_videos(self):
         return self.rented_videos
 
@@ -459,16 +459,16 @@ class Employee:
     def is_eligible_to_work(self):
         age = relativedelta(datetime.now(), self.passport.get_date_of_birth()).years
         return self.passport.get_country_of_residence() == "United Kingdom" and age >= 18
-        
+
 class Passport:
-    
+
     def __init__(self, country, dob):
         self.country_of_residence = country
         self.date_of_birth = dob
-        
+
     def get_country_of_residence(self):
         return self.country_of_residence
-        
+
     def get_date_of_birth(self):
         return self.date_of_birth
 ```

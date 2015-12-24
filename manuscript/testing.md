@@ -1,4 +1,5 @@
-# Why do we need programs to test our programs?
+# Grown-up Programmers Write Software That Is Easy To Test
+## Why do we need programs to test our programs?
 
 Imagine you're tunnelling out a top secret underground base. You drill through the ground, carving out rooms and corridors that are all connected. There's great danger in this sort of work. The more tunnelling you do, the bigger the risk that vibrations will cause another part of the base to collapse.
 
@@ -20,7 +21,7 @@ This is why grown-up programmers get the computer to perform their tests for the
 
 What might take us days or weeks, the computer could do in minutes or even seconds.
 
-# How do we write programs that test programs?
+## How do we write programs that test programs?
 
 How you do it is quite simple: just write some code that calls the functions in your program and checks to see they're producing the results you expect.
 
@@ -61,7 +62,7 @@ It's just one test for a very simple function, though. A much bigger program mig
 
 And we'd also have to remember to add a call to each new test function to run it as part of the set of tests for your program. That can get a bit boring and repetitive after a while, and we might forget to do it from time to time, which means some tests won't get run. That's like having missing supports in our underground tunnels – dangerous!
 
-# PyUnit to the rescue!
+## PyUnit to the rescue!
 
 Luckily, somebody already thought of this. Python comes with a built-in module – called unittest (also known as "PyUnit") – for writing tests that can run all our test functions automatically.
 
@@ -157,7 +158,7 @@ This tells us that one of our test's assertions failed: that is, the answer to o
 
 It also tells us how long they took to run (in this case, 0.008 seconds, or 8 milliseconds.) It's worth keeping an eye on this number. As we write more tests, they will take longer to run. The longer they take to run, the less often we can run them. Time between test runs is like the space between supports in our underground base. The wider the spaces, the greater the risk that they won't offer enough support. That's why it's important to have tests that run quickly.
 
-# What are "Unit Tests"?
+## What are "Unit Tests"?
 
 When car manufacturers test cars: they don't just test the whole car once it's built, for example by taking it out on a test race track. They also test all the individual parts of the car to make sure they all do what they're supposed to.
 
@@ -169,7 +170,7 @@ By writing unit tests, we can focus our questions on parts of the code that do s
 
 In fact, some programmers write such good unit tests that they rarely have to use a debugger at all.
 
-# How do we organise our code for testing?
+## How do we organise our code for testing?
 
 Grouping our tests together in a logical way helps us to find them when we need to.
 
@@ -278,7 +279,7 @@ if __name__ == '__main__':
 
 The code uses the unittest.TestLoader to discover all the test classes in all files that follow the pattern "test*.py", so all our tests must be contained in files starting with "test" or it won't find them. It adds all the tests it finds to the collection, which we can then use the unittest.TextTestRunner to run.
 
-# Asking the right questions
+## Asking the right questions
 
 In all the examples so far, we've used assertEqual() to check that a result matches the value we expect. PyUnit has other built-in assertion methods we can use to do other kinds of checks.
 
@@ -336,7 +337,7 @@ def test_tshirt_added_to_order(self):
 
 But even this doesn't guarantee that our source code must be doing the right thing. Can you think of ways to pass this test without actually adding the t-shirt to the order?
 
-# Testing your tests
+## Testing your tests
 
 Having tests that we can run quickly can give us a warm fuzzy feeling that our code is working. But perhaps our tests are lulling us into a false sense of security. Grown-up programmers know that, just because their tests all passed, that doesn't necessarily mean their program is definitely 100% working.
 
@@ -373,7 +374,7 @@ Phew! One of our tests caught it. So we can be confident that part of our code i
 
 We recommend you test your tests while you're writing them, so you can focus on one test at a time and only a small part of the code being tested. For every test, make sure it does fail when the result is wrong.
 
-# Fake the stuff you don't want in your unit tests
+## Fake the stuff you don't want in your unit tests
 
 Grown-up programs often use the functions of external programs. Your program might use a database like MySQL, or read and write files using the file system on the computer, or use the web services of sites like Facebook or PayPal.
 
@@ -472,7 +473,7 @@ This is good program design, generally. Now we can get temperature data from dif
 
 As we see in the chapter "Grown-up Programmers Write Code That Is Easy To Change", it's a good idea to break our programs down into small objects that do one specific job, and plug them together like this so they can be easily swapped with objects that look the same from the outside, but do things differently inside.
 
-# Different kinds of testing
+## Different kinds of testing
 
 So far, we've looked at unit testing, which focuses our questions on specific parts of our program.
 
@@ -545,7 +546,7 @@ Your integration tests will check only the code that talks directly to external 
 
 Your system tests will check key user features – maybe a few dozen for the whole program – and you might only run them as a final check before committing your code to version control (see chapter "Grown-up Programmers Can Go Back To Any Version Of Their Code"), just to be sure the program works as a whole.
 
-# If Your Test Code Is Hard To Change, Your Programs will Be Hard To Change
+## If Your Test Code Is Hard To Change, Your Programs will Be Hard To Change
 
 [Add motivating example of why bad tests make code hard to change]
 

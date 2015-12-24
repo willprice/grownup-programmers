@@ -1,10 +1,12 @@
+# Grown-up Programmers Write Software That Is Easy To Change
+
 For many years, we've called it "software" because it's supposedly easy to change. The design of a house, once it's built, is literally set in stone (or concrete, or steel, or timber). Computer code isn't like that: it's not poured like concrete or welded like steel or nailed down like wood. It's much easier to change a line of code than it is to move the foundations of a house.
 
 But it's not quite as easy as people think, and the larger the program gets, the harder it can be to change. So much so that many programs have to be abandoned and re-written all over again, because that's easier than making the changes users want. (And they will want them.)
 
 Grown-up programmers design their programs to make them easier to change and to reduce the risk of breaking them when they do.
 
-# Keep It Working
+## Keep It Working
 
 When we make a change to our program code – no matter how small – it's vitally important to check as soon as possible that it still works.
 
@@ -12,7 +14,7 @@ We do this by testing the program to look for any new bugs we might have introdu
 
 This is why Grown-up Programmers Write Programs To Test Their Programs. What might take me and you a long time to do, a computer can do in minutes or seconds. By writing fast-running unit tests that check most of our code quickly, we can test our program over and over again, as often as we need. This can give us much higher confidence that it still works after we've changed it.
 
-# Write Code That Other Programmers Can Understand
+## Write Code That Other Programmers Can Understand
 
 After making sure our code still works, the next most important thing to think about is how easy our code is to understand. Grown-up programmers spend a lot of time reading code so they can make changes to it. If we can make our code easier to understand, we'll be saving a lot of time later.
 
@@ -81,25 +83,25 @@ The code we have now does exactly the same thing as the original, which we can c
 
 If we want to write code that's easier to understand, here are some things we need to think about:
 
-## Classes & Modules
+### Classes & Modules
 
 Do their names describe what they're for?
 
 A class name should make it clear what its job is. For example, if we write a class that calculates how much rocket fuel a spaceship would need to reach Mars, the name `FuelCalculator` would tell us more than, say, just `Calc`. Don't be afraid to use whole words, and don't worry about making it too obvious!
 
-## Methods & Functions
+### Methods & Functions
 
 Do their names describe what they do?
 
 If we have a method on a class called `Email` that sends an email, then `email.send()` makes more sense than something like `email.do()` or `email.execute()`.
 
-## Parameters, Variables & Fields
+### Parameters, Variables & Fields
 
 Do their names describe what they represent?
 
 If we have a parameter of `send()` that let's us queue the email up to send later instead of sending it straight away, choose a name for that parameter that makes it clear what it means (e.g., `email.send(queue=True)` ). The same is true for variables and fields. name them so it's obvious what that piece of data represents in our program. Again, don't be afraid to use whole words; `email.send(q=True)` isn't as clear.
 
-## Special data values
+### Special data values
 
 Are numbers, strings and other specially important data values clear?
 
@@ -135,7 +137,7 @@ class Book:
         libraryMember.loan(self)
 ```
 
-## Comments
+### Comments
 
 Do we rely too much on comments to explain our code?
 
@@ -191,7 +193,7 @@ index_of_Mr_Dinkles = binary_search(cats, "Mr Dinkles")
 
 In this silly example, we want to search for the index of a cat's name in a list. Because we've chosen to use a binary search algorithm for speed on bigger lists (Google "binary search" for more information) , we need to sort the list first. The comment explains why we're sorting the list before we call `binary_search()`.
 
-# Keep It Simple
+## Keep It Simple
 
 Code that's simple is often easier to understand. Not always, but often. And code that's simple is less likely to go wrong, because there are less things that might break. For both these reasons, simpler code tends to be easier to change.
 
@@ -243,7 +245,7 @@ But some Python programmers might find this second simplified version a little h
 
 Writing code that's easy to understand is more important than writing code that's simpler. If you're in any doubt, show both versions – the original and the simplified one – to another programmer and get their input on which makes more sense to them.
 
-# You Ain't Gonna Need it
+## You Ain't Gonna Need it
 
 Imagine you're going on a trip and you need to pack for it. Some people get the biggest suitcase they can find and cram as much as possible into it: clothes for every occasion, bathroom stuff to last a month, medicines, gadgets (and their chargers), books, maps, First Aid kits, towels, toilet paper, even food and drink. Now matter how long the trip: they pack everything think they might need.
 
@@ -261,7 +263,7 @@ By adding the MySQL database before we know we need it, we've made our program m
 
 So before you add anything to your program, stop and ask yourself: do I know I need this? Is this the simplest solution to the problem? If not, then leave it out until a need arises.
 
-# Use Pieces That Do One Thing
+## Use Pieces That Do One Thing
 
 A café serves:
 
@@ -375,7 +377,7 @@ class RentalsReport:
             print(video.get_title())
 ```
 
-# Don't Repeat Yourself
+## Don't Repeat Yourself
 
 Take a look at pretty much anyone's code, and you'll see bits of it that might look very similar.
 
@@ -443,7 +445,7 @@ def calculate_weather_statistics(temperature_readings, rainfall_readings, cloud_
     return statistics
 ```
 
-# Put The Work Where The Knowledge Is
+## Put The Work Where The Knowledge Is
 
 Our code is full of dependencies – functions that call functions, classes that use classes, methods that use fields, and so on. In all these cases, making even a tiny change to one bit of code can cause other parts of the program to break.
 
@@ -500,7 +502,7 @@ All we've done here is move `is_eligible_to_work()` from `Employee` to `Passport
 
 Generally, the less classes and methods, and modules and functions, know about each other, the better.
 
-# Plug Objects Together From The Outside
+## Plug Objects Together From The Outside
 
 Object Oriented Programming (OOP) is about dividing up the work our program needs to do to complete a task for the user, giving specific jobs to objects that have the knowledge to do them. Objects need to work together to complete a task, calling each other's methods when they need something done.
 

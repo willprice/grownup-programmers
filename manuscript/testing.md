@@ -11,7 +11,7 @@ The same can happen when we are programming. While we're writing one part of our
 
 If you were building an underground base, you'd reinforce the tunnels you'd dug out with strong supports to guard against collapse.
 
-![Tunnel supports image](media/images/tunnel_supports)
+![Tunnel supports image](images/tunnel_supports.jpg)
 
 Grown-up programmers do something similar; they support the code they've already got working by re-testing it to check if anything is broken, catching new bugs before they can do any serious damage.
 
@@ -495,7 +495,7 @@ This is the equivalent of taking a new car out on to the track for a spin, just 
 
 Grown-up programmers call tests that check the program works a whole system tests.
 
-![Road simulator image](media/images/roadsimulator.jpg)
+![Road simulator image](images/roadsimulator.jpg)
 
 Tests that involve things like reading files usually run far slower than unit tests that fake it. For this reason, it's a very good idea to rely more on fast-running unit tests to check that our code works, and have fewer integration and system tests.
 
